@@ -3,7 +3,9 @@ import "../App.css";
 import Message from "./Message";
 
 let MessageList = props => {
-  return <Message />;
+  return props.messages.map(message => {
+    return <Message />;
+  });
 };
 
 export default MessageList;
