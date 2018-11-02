@@ -15,7 +15,12 @@ const Toolbar = props => {
           </i>
         </button>
 
-        <button className="btn btn-default">Mark As Read</button>
+        <button
+          onClick={props.markAsReadButtonClicked}
+          className="btn btn-default"
+        >
+          Mark As Read
+        </button>
 
         <button className="btn btn-default">Mark As Unread</button>
 

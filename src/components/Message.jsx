@@ -10,7 +10,16 @@ let Message = props => {
       <div className="col-xs-1">
         <div className="row">
           <div className="col-xs-2">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onClick={() => props.messageSelected(props.message.id)}
+              checked={
+                typeof props.message.selected !== "undefined" &&
+                props.message.selected === true
+                  ? "checked"
+                  : ""
+              }
+            />
           </div>
           <div className="col-xs-2">
             <i className="star fa fa-star-o" />
